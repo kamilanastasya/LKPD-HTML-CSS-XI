@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LKPD NO 2</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    nav{
+        display: flex;
+        justify-content: center;
+    }
+    .logo-menu {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .logo-menu img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+    .destinations {
+      margin-top: 40px;
+    }
+    .destination {
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+    .destination img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+    .stats {
+      font-size: 14px;
+      color: #666;
+    }
+    .stats span {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Liburan</a>
+    <div class="logo-menu">
+        <img src="data:image/png;base64,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" alt="Liburan Logo">
+      </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+
+    <div class="destinations">
+      <h2>Explore Our Destinations</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="destination">
+            <img src="bali.jpeg" alt="Bali">
+            <h3>Bali, Indonesia</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            <div class="stats">
+              <span>234 Viewers</span>
+              <span>12 Comments</span>
+            </div>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="destination">
+            <img src="phuket.jpeg" alt="Phuket">
+            <h3>Phuket, Thailand</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            <div class="stats">
+              <span>456 Viewers</span>
+              <span>20 Comments</span>
+            </div>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="destination">
+            <img src="langkawi.jpeg" alt="Langkawi">
+            <h3>Langkawi, Malaysia</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            <div class="stats">
+              <span>678 Viewers</span>
+              <span>30 Comments</span>
+            </div>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

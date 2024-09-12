@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKPD NO 5</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #alert-box {
+            position: absolute;
+            background-color: #FF0000; /* warna merah */
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFFFFF; /* warna putih */
+            text-align: center;
+          }
+          
+          #btn-alert {
+            position: relative;
+            width: 100px;
+            height: 50px;
+            background-color: green;
+          }
+          
+          #alert-box {
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          
+    </style>
+</head>
+<body>
+    <button id="btn-alert">Mulai</button>
+    <div id="alert-box" style="display: none;"></div>
+</body>
+<script>
+    const btnAlert = document.getElementById('btn-alert');
+    const alertBox = document.getElementById('alert-box');
+    
+    btnAlert.addEventListener('click', () => {
+      let count = 5;
+      alertBox.style.display = 'block';
+      const intervalId = setInterval(() => {
+        alertBox.innerHTML = `Hitung mundur: ${count}`;
+        count--;
+        if (count === -1) {
+          clearInterval(intervalId);
+          alertBox.style.display = 'none';
+        }
+      }, 1000);
+    });
+    
+</script>
+</html>
